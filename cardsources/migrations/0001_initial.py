@@ -11,11 +11,25 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
+            name='BattlePack',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('name', models.CharField(max_length=30)),
+                ('is_sealed', models.BooleanField(default=False, verbose_name=b'Sealed')),
+                ('is_draft', models.BooleanField(default=False, verbose_name=b'Draft')),
+            ],
+            options={
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
             name='Booster',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=50)),
-                ('serie', models.CharField(max_length=10, choices=[(b'original', b'Yu-Gi-Oh'), (b'gx', b'Yu-Gi-Oh GX'), (b'5ds', b'Tu-Gi-Oh 5Ds')])),
+                ('cost', models.IntegerField(default=400)),
+                ('serie', models.CharField(max_length=10, choices=[(b'original', b'Yu-Gi-Oh'), (b'gx', b'Yu-Gi-Oh GX'), (b'5ds', b"Yu-Gi-Oh 5D's"), (b'zexal', b'Yu-Gi-Oh Zexal'), (b'arc-v', b'Yu-Gi-Oh ARC-V')])),
+                ('description', models.TextField()),
             ],
             options={
             },
@@ -26,8 +40,9 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=50)),
+                ('challenge_deck', models.BooleanField(default=False)),
                 ('dlc', models.BooleanField(default=False)),
-                ('dlc_name', models.CharField(max_length=50)),
+                ('dlc_name', models.CharField(max_length=50, null=True)),
             ],
             options={
             },

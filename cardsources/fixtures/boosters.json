@@ -3,14 +3,216 @@
         "model": "cardsources.Booster",
         "pk": 1,
         "fields": {
-            "name": "Grandpa Muto"
+            "name": "Grandpa Muto",
+            "cost": 200,
+            "serie": "original"
         }
     },
     {
         "model": "cardsources.Booster",
         "pk": 2,
         "fields": {
-            "name": "Kaiba"
+            "name": "Mai Valentine",
+            "cost": 400,
+            "serie": "original"
         }
     },
+    {
+        "model": "cardsources.Booster",
+        "pk": 3,
+        "fields": {
+            "name": "Bakura",
+            "cost": 400,
+            "serie": "original"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 4,
+        "fields": {
+            "name": "Joey Wheeler",
+            "cost": 400,
+            "serie": "original"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 5,
+        "fields": {
+            "name": "Seto Kaiba",
+            "cost": 400,
+            "serie": "original"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 6,
+        "fields": {
+            "name": "Yugi",
+            "cost": 400,
+            "serie": "original"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 7,
+        "fields": {
+            "name": "Alexis Rhodes",
+            "cost": 400,
+            "serie": "gx"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 8,
+        "fields": {
+            "name": "Bastion Misawa",
+            "cost": 400,
+            "serie": "gx"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 9,
+        "fields": {
+            "name": "Chazz Princeton",
+            "cost": 400,
+            "serie": "gx"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 10,
+        "fields": {
+            "name": "Syrus Truesdale",
+            "cost": 400,
+            "serie": "gx"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 11,
+        "fields": {
+            "name": "Jesse Anderson",
+            "cost": 400,
+            "serie": "gx"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 12,
+        "fields": {
+            "name": "Jaden Yuki",
+            "cost": 400,
+            "serie": "gx"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 13,
+        "fields": {
+            "name": "Tetsu Trudge",
+            "cost": 400,
+            "serie": "5ds"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 14,
+        "fields": {
+            "name": "Leo/Luna",
+            "cost": 400,
+            "serie": "5ds"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 15,
+        "fields": {
+            "name": "Akiza Izinski",
+            "cost": 400,
+            "serie": "5ds"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 16,
+        "fields": {
+            "name": "Jack Atlas",
+            "cost": 400,
+            "serie": "5ds"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 17,
+        "fields": {
+            "name": "Crow",
+            "cost": 400,
+            "serie": "5ds"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 18,
+        "fields": {
+            "name": "Yusei Fudo",
+            "cost": 400,
+            "serie": "5ds"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 19,
+        "fields": {
+            "name": "Cathy Katherine",
+            "cost": 400,
+            "serie": "zexal"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 20,
+        "fields": {
+            "name": "Quinton",
+            "cost": 400,
+            "serie": "zexal"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 21,
+        "fields": {
+            "name": "Kite Tenjo",
+            "cost": 400,
+            "serie": "zexal"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 22,
+        "fields": {
+            "name": "Shark",
+            "cost": 400,
+            "serie": "zexal"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 23,
+        "fields": {
+            "name": "Yuma Tsukumo",
+            "cost": 400,
+            "serie": "zexal"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 24,
+        "fields": {
+            "name": "Pendulum",
+            "cost": 400,
+            "serie": "zexal"
+        }
+    }
 ]

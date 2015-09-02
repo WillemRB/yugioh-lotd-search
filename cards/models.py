@@ -3,9 +3,12 @@ from cardsources.models import Deck,Booster
 
 class CardType(models.Model):
     name = models.CharField(max_length=20)
-    
+
     def __str__(self):
         return self.name
+
+    class Meta:
+        ordering = ['name']
 
 class Card(models.Model):
     name = models.CharField(max_length=200)
@@ -16,17 +19,11 @@ class Card(models.Model):
     database_id = models.IntegerField(unique=True, help_text='The Yugioh-Card database id')
 
     image_url = models.URLField(max_length=200)
-    
+
     decks = models.ManyToManyField(Deck)
     boosters = models.ManyToManyField(Booster)
 
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        abstract = True
-
-class MonsterCard(Card):
+    # Monster card specific
     attribute = models.CharField(
         max_length = 2,
         choices = (
@@ -39,11 +36,12 @@ class MonsterCard(Card):
             ('wn', 'WIND'),
         ),
     )
-    level = models.IntegerField()
-    attack = models.IntegerField()
-    defense = models.IntegerField()
+    level = models.IntegerField(null=True)
+    stars = models.IntegerField(null=True)
+    attack = models.IntegerField(null=True)
+    defense = models.IntegerField(null=True)
 
-class SpellCard(Card):
+    # Spell card specific
     effect_type = models.CharField(
         max_length = 4,
         choices = (
@@ -58,4 +56,9 @@ class SpellCard(Card):
             ('nt', 'Normal Trap')
         )
     )
-    
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ['name']

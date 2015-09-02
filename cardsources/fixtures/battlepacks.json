@@ -1,0 +1,29 @@
+[
+    {
+        "model": "cardsources.BattlePack",
+        "pk": 1,
+        "fields": {
+            "name": "Epic Dawn",
+            "is_sealed": true,
+            "is_draft": false
+        }
+    },
+    {
+        "model": "cardsources.BattlePack",
+        "pk": 2,
+        "fields": {
+            "name": "War of the Giants",
+            "is_sealed": true,
+            "is_draft": false
+        }
+    },
+    {
+        "model": "cardsources.BattlePack",
+        "pk": 3,
+        "fields": {
+            "name": "Draft",
+            "is_sealed": false,
+            "is_draft": true
+        }
+    }
+]

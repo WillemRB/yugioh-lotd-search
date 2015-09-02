@@ -1,0 +1,30 @@
+[
+    {
+        "model": "cardsources.Player",
+        "pk": 1,
+        "fields": {
+            "name": "Arkana"
+        }
+    },
+    {
+        "model": "cardsources.Player",
+        "pk": 2,
+        "fields": {
+            "name": "Bandit Keith"
+        }
+    },
+    {
+        "model": "cardsources.Player",
+        "pk": 3,
+        "fields": {
+            "name": "Bonz"
+        }
+    },
+    {
+        "model": "cardsources.Player",
+        "pk": 4,
+        "fields": {
+            "name": "Ishizu Ishtar"
+        }
+    }
+]
