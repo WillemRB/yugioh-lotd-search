@@ -1,0 +1,16 @@
+[
+    {
+        "model": "cardsources.Booster",
+        "pk": 1,
+        "fields": {
+            "name": "Grandpa Muto"
+        }
+    },
+    {
+        "model": "cardsources.Booster",
+        "pk": 2,
+        "fields": {
+            "name": "Kaiba"
+        }
+    },
+]

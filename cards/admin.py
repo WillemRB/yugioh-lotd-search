@@ -1,5 +1,5 @@
 from django.contrib import admin
-from cards.models import CardType,MonsterCard,SpellCard
+from cards.models import CardType, MonsterCard, SpellCard
 
 admin.site.register(CardType)
 admin.site.register(MonsterCard)

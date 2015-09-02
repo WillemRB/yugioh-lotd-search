@@ -1,0 +1,16 @@
+[
+    {
+        "model": "cards.CardType",
+        "pk": 1,
+        "fields": {
+            "name": "Dragon"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 2,
+        "fields": {
+            "name": "Beast"
+        }
+    }
+]
