@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Booster - {{ booster.name }}{% endblock %}
+
+{% block content %}
+<div id="booster">
+    <div class="booster-image">
+        <img src="{{ booster.image_url }}" alt="{{ booster.name }}" />
+    </div>
+    <div class="booster-info">
+        <h2>{{ booster.name }}</h2>
+        <p>Cost: {{ booster.cost }}DP</p>
+    </div>
+</div>
+{% endblock %}

@@ -4,4 +4,4 @@ from django.shortcuts import render
 from models import Card
 
 def index(request):
-    return HttpResponse("Hello World!")
+    return render(request, 'card.html')

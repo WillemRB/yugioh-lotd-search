@@ -1,0 +1,24 @@
+body {
+    background-color: #002255;
+}
+
+#content {
+    margin: auto;
+    height: 200px;
+    width: 200px;
+}
+
+/* Booster */
+#booster {
+    height: 60px;
+    width: 100px;
+}
+
+.booster-image {
+    float: left;
+    width: 20px;
+    height: 50px;
+    margin: 5px;
+}
+
+/* Deck */

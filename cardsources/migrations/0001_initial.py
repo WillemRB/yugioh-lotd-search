@@ -19,6 +19,7 @@ class Migration(migrations.Migration):
                 ('is_draft', models.BooleanField(default=False, verbose_name=b'Draft')),
             ],
             options={
+                'ordering': ['name'],
             },
             bases=(models.Model,),
         ),
@@ -30,8 +31,10 @@ class Migration(migrations.Migration):
                 ('cost', models.IntegerField(default=400)),
                 ('serie', models.CharField(max_length=10, choices=[(b'original', b'Yu-Gi-Oh'), (b'gx', b'Yu-Gi-Oh GX'), (b'5ds', b"Yu-Gi-Oh 5D's"), (b'zexal', b'Yu-Gi-Oh Zexal'), (b'arc-v', b'Yu-Gi-Oh ARC-V')])),
                 ('description', models.TextField()),
+                ('image_url', models.URLField()),
             ],
             options={
+                'ordering': ['name'],
             },
             bases=(models.Model,),
         ),
@@ -45,6 +48,7 @@ class Migration(migrations.Migration):
                 ('dlc_name', models.CharField(max_length=50, null=True)),
             ],
             options={
+                'ordering': ['name'],
             },
             bases=(models.Model,),
         ),

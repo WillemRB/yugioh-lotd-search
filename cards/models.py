@@ -2,7 +2,7 @@ from django.db import models
 from cardsources.models import Deck,Booster
 
 class CardType(models.Model):
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=20, unique=True)
 
     def __str__(self):
         return self.name
@@ -16,7 +16,10 @@ class Card(models.Model):
 
     card_types = models.ManyToManyField(CardType)
     limitation = models.IntegerField(default=3)
-    database_id = models.IntegerField(unique=True, help_text='The Yugioh-Card database id')
+    
+    database_id = models.IntegerField(null=True, help_text='The Yugioh-Card database id')
+    # Changes per printing
+    #print_tag = models.CharField(max_length=15, null=True)
 
     image_url = models.URLField(max_length=200)
 
@@ -27,6 +30,7 @@ class Card(models.Model):
     attribute = models.CharField(
         max_length = 2,
         choices = (
+            (None, 'None'),
             ('dk', 'DARK'),
             ('dv', 'DIVINE'),
             ('ea', 'EARTH'),
@@ -45,6 +49,7 @@ class Card(models.Model):
     effect_type = models.CharField(
         max_length = 4,
         choices = (
+            (None, 'None'),
             ('con', 'Continuous Spell'),
             ('fld', 'Field Spell'),
             ('eq', 'Equip Spell'),
@@ -59,6 +64,12 @@ class Card(models.Model):
 
     def __str__(self):
         return self.name
+
+    def is_monster(self):
+        return self.attribute != None
+        
+    def is_spell(self):
+        return self.effect_type != None
 
     class Meta:
         ordering = ['name']

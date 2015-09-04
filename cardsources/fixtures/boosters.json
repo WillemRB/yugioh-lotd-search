@@ -5,7 +5,8 @@
         "fields": {
             "name": "Grandpa Muto",
             "cost": 200,
-            "serie": "original"
+            "serie": "original",
+            "image_url": "http://i.imgur.com/aohnRbe.png"
         }
     },
     {
@@ -14,7 +15,8 @@
         "fields": {
             "name": "Mai Valentine",
             "cost": 400,
-            "serie": "original"
+            "serie": "original",
+            "image_url": "http://i.imgur.com/G9mSF8V.png"
         }
     },
     {
@@ -23,7 +25,8 @@
         "fields": {
             "name": "Bakura",
             "cost": 400,
-            "serie": "original"
+            "serie": "original",
+            "image_url": "http://i.imgur.com/8PtShB2.png"
         }
     },
     {
@@ -32,7 +35,8 @@
         "fields": {
             "name": "Joey Wheeler",
             "cost": 400,
-            "serie": "original"
+            "serie": "original",
+            "image_url": "http://i.imgur.com/VhAnEYd.png"
         }
     },
     {
@@ -41,7 +45,8 @@
         "fields": {
             "name": "Seto Kaiba",
             "cost": 400,
-            "serie": "original"
+            "serie": "original",
+            "image_url": "http://i.imgur.com/45nl3Rj.png"
         }
     },
     {
@@ -50,7 +55,8 @@
         "fields": {
             "name": "Yugi",
             "cost": 400,
-            "serie": "original"
+            "serie": "original",
+            "image_url": "http://i.imgur.com/VkW92qx.png"
         }
     },
     {
@@ -59,7 +65,8 @@
         "fields": {
             "name": "Alexis Rhodes",
             "cost": 400,
-            "serie": "gx"
+            "serie": "gx",
+            "image_url": "http://i.imgur.com/Su8nRvt.png"
         }
     },
     {
@@ -68,7 +75,8 @@
         "fields": {
             "name": "Bastion Misawa",
             "cost": 400,
-            "serie": "gx"
+            "serie": "gx",
+            "image_url": "http://i.imgur.com/i4LhNkQ.png"
         }
     },
     {
@@ -77,7 +85,8 @@
         "fields": {
             "name": "Chazz Princeton",
             "cost": 400,
-            "serie": "gx"
+            "serie": "gx",
+            "image_url": "http://i.imgur.com/KxQblRK.png"
         }
     },
     {
@@ -86,7 +95,8 @@
         "fields": {
             "name": "Syrus Truesdale",
             "cost": 400,
-            "serie": "gx"
+            "serie": "gx",
+            "image_url": "http://i.imgur.com/DgUIxy0.png"
         }
     },
     {
@@ -95,7 +105,8 @@
         "fields": {
             "name": "Jesse Anderson",
             "cost": 400,
-            "serie": "gx"
+            "serie": "gx",
+            "image_url": "http://i.imgur.com/DlO4KiS.png"
         }
     },
     {
@@ -104,7 +115,8 @@
         "fields": {
             "name": "Jaden Yuki",
             "cost": 400,
-            "serie": "gx"
+            "serie": "gx",
+            "image_url": "http://i.imgur.com/DlO4KiS.png"
         }
     },
     {
@@ -113,7 +125,8 @@
         "fields": {
             "name": "Tetsu Trudge",
             "cost": 400,
-            "serie": "5ds"
+            "serie": "5ds",
+            "image_url": "http://i.imgur.com/tFVfCKT.png"
         }
     },
     {
@@ -122,7 +135,8 @@
         "fields": {
             "name": "Leo/Luna",
             "cost": 400,
-            "serie": "5ds"
+            "serie": "5ds",
+            "image_url": "http://i.imgur.com/9J00eJJ.png"
         }
     },
     {
@@ -131,7 +145,8 @@
         "fields": {
             "name": "Akiza Izinski",
             "cost": 400,
-            "serie": "5ds"
+            "serie": "5ds",
+            "image_url": "http://i.imgur.com/v1VFTrP.png"
         }
     },
     {
@@ -140,7 +155,8 @@
         "fields": {
             "name": "Jack Atlas",
             "cost": 400,
-            "serie": "5ds"
+            "serie": "5ds",
+            "image_url": "http://i.imgur.com/Pl4WE6v.png"
         }
     },
     {
@@ -149,7 +165,8 @@
         "fields": {
             "name": "Crow",
             "cost": 400,
-            "serie": "5ds"
+            "serie": "5ds",
+            "image_url": "http://i.imgur.com/3i3wbwM.png"
         }
     },
     {
@@ -158,7 +175,8 @@
         "fields": {
             "name": "Yusei Fudo",
             "cost": 400,
-            "serie": "5ds"
+            "serie": "5ds",
+            "image_url": "http://i.imgur.com/5HVTHXT.png"
         }
     },
     {
@@ -167,7 +185,8 @@
         "fields": {
             "name": "Cathy Katherine",
             "cost": 400,
-            "serie": "zexal"
+            "serie": "zexal",
+            "image_url": "http://i.imgur.com/a1AuxhK.png"
         }
     },
     {
@@ -176,7 +195,8 @@
         "fields": {
             "name": "Quinton",
             "cost": 400,
-            "serie": "zexal"
+            "serie": "zexal",
+            "image_url": "http://i.imgur.com/Uqqx0hq.png"
         }
     },
     {
@@ -185,7 +205,8 @@
         "fields": {
             "name": "Kite Tenjo",
             "cost": 400,
-            "serie": "zexal"
+            "serie": "zexal",
+            "image_url": "http://i.imgur.com/32MfXDy.png"
         }
     },
     {
@@ -194,7 +215,8 @@
         "fields": {
             "name": "Shark",
             "cost": 400,
-            "serie": "zexal"
+            "serie": "zexal",
+            "image_url": "http://i.imgur.com/eIuaFIQ.png"
         }
     },
     {
@@ -203,7 +225,8 @@
         "fields": {
             "name": "Yuma Tsukumo",
             "cost": 400,
-            "serie": "zexal"
+            "serie": "zexal",
+            "image_url": "http://i.imgur.com/GQx8Eru.png"
         }
     },
     {
@@ -212,7 +235,8 @@
         "fields": {
             "name": "Pendulum",
             "cost": 400,
-            "serie": "zexal"
+            "serie": "zexal",
+            "image_url": "http://i.imgur.com/I3crLpi.png"
         }
     }
 ]

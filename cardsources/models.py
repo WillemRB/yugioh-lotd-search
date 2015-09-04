@@ -36,6 +36,7 @@ class Booster(models.Model):
         )
     )
     description = models.TextField()
+    image_url = models.URLField()
 
     def __str__(self):
         return self.name
