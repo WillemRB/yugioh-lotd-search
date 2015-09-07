@@ -1,0 +1,14 @@
+.navbar {
+    padding: 30px 50px 28px;
+    background: #000;
+}
+
+.navbar-item a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #FFF;
+    text-decoration: underline;
+}

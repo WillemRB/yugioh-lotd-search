@@ -1,5 +1,27 @@
 {% extends "base.html" %}
 
-{% block title %}Card{% endblock %}
+{% block title %}- {{ card.name }}{% endblock %}
 
-{% block content %}Hello World{% endblock %}
+{% block content %}
+    <div class="units-row end">
+        <div class="unit-33">Img</div>
+        <div class="unit-66">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>{{ card.name }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="units-row end">
+        <div class="unit-50">Boosters</div>
+        <div class="unit-50">Decks</div>
+    </div>
+{% endblock %}

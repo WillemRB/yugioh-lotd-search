@@ -3,21 +3,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="{% static "style.css" %}" />
-    <title>{% block title %}Yugioh{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "css\kube.min.css" %}" />
+    <link rel="stylesheet" href="{% static "css\style.css" %}" />
+    <title>Yugioh {% block title %}{% endblock %}</title>
 </head>
 
 <body>
-    <header>
-        
-    </header>
-
-    <div id="content">
-        {% block content %}{% endblock %}
-    </div>
+    <nav class="navbar">
+        <ul>
+            <li class="navbar-item"><a href="#">Search</a></li>
+            <li class="navbar-item"><a href="#">Boosters</a></li>
+            <li class="navbar-item"><a href="#">Decks</a></li>
+        </ul>
+    </nav>
     
-    <footer>
-        
-    </footer>
+    <div class="units-row">    
+        <div class="unit-centered unit-60">
+        {% block content %}{% endblock %}
+        </div>
+    </div>
 </body>
 </html>
