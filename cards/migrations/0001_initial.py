@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=200)),
                 ('description', models.TextField(help_text=b'The card text (can include flavour text)', blank=True)),
-                ('limitation', models.IntegerField(default=3, choices=[(0, b'Forbidden'), (1, b'Limited'), (2, b'Semi-Limited'), (3, b'None')])),
+                ('limitation', models.IntegerField(default=3, choices=[(0, b'Forbidden'), (1, b'Limited'), (2, b'Semi-Limited'), (3, b'Unlimited')])),
                 ('database_id', models.IntegerField(help_text=b'The Yugioh-Card database id', null=True, blank=True)),
                 ('image_url', models.URLField()),
                 ('attribute', models.CharField(blank=True, max_length=2, choices=[(None, b'None'), (b'dk', b'DARK'), (b'dv', b'DIVINE'), (b'ea', b'EARTH'), (b'fr', b'FIRE'), (b'lt', b'LIGHT'), (b'wt', b'WATER'), (b'wn', b'WIND')])),

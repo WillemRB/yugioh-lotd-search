@@ -3,7 +3,7 @@
         "model": "cards.CardType",
         "pk": 1,
         "fields": {
-            "name": "Dragon"
+            "name": "Aqua"
         }
     },
     {
@@ -11,6 +11,216 @@
         "pk": 2,
         "fields": {
             "name": "Beast"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 3,
+        "fields": {
+            "name": "Beast-Warrior"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 4,
+        "fields": {
+            "name": "Dinosaur"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 5,
+        "fields": {
+            "name": "Divine-Beast"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 6,
+        "fields": {
+            "name": "Dragon"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 7,
+        "fields": {
+            "name": "Fairy"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 8,
+        "fields": {
+            "name": "Fiend"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 9,
+        "fields": {
+            "name": "Fish"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 10,
+        "fields": {
+            "name": "Insect"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 11,
+        "fields": {
+            "name": "Machine"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 12,
+        "fields": {
+            "name": "Plant"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 13,
+        "fields": {
+            "name": "Psychic"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 14,
+        "fields": {
+            "name": "Pyro"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 15,
+        "fields": {
+            "name": "Reptile"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 16,
+        "fields": {
+            "name": "Rock"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 17,
+        "fields": {
+            "name": "Sea Serpent"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 18,
+        "fields": {
+            "name": "Spellcaster"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 19,
+        "fields": {
+            "name": "Thunder"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 20,
+        "fields": {
+            "name": "Warrior"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 21,
+        "fields": {
+            "name": "Winged Beast"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 22,
+        "fields": {
+            "name": "Wyrm"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 23,
+        "fields": {
+            "name": "Zombie"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 24,
+        "fields": {
+            "name": "Normal"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 25,
+        "fields": {
+            "name": "Effect"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 26,
+        "fields": {
+            "name": "Ritual"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 27,
+        "fields": {
+            "name": "Fusion"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 28,
+        "fields": {
+            "name": "Synchro"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 29,
+        "fields": {
+            "name": "Xyz"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 30,
+        "fields": {
+            "name": "Pendulum"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 31,
+        "fields": {
+            "name": "Token"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 32,
+        "fields": {
+            "name": "Tuner"
         }
     }
 ]

@@ -60,7 +60,9 @@
     <div class="unit-50">
         <h3>Boosters</h3>
         {% for booster in card.boosters.all %}
-            <p>{{ booster.name }}</p>
+            <a href="{% url 'booster' booster.id %}">
+                <img src="{{ booster.image_url }}" alt="{{ booster.name }}" />
+            </a>
         {% empty %}
             <p>This card is not available in a booster.</p>
         {% endfor %}

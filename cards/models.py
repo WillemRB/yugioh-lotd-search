@@ -20,7 +20,7 @@ class Card(models.Model):
             (0, 'Forbidden'),
             (1, 'Limited'),
             (2, 'Semi-Limited'),
-            (3, 'None')
+            (3, 'Unlimited')
         ),
         default=3)
     
