@@ -3,13 +3,17 @@
 {% block title %}Booster - {{ booster.name }}{% endblock %}
 
 {% block content %}
-<div id="booster">
-    <div class="booster-image">
-        <img src="{{ booster.image_url }}" alt="{{ booster.name }}" />
+<div class="units-row end">
+    <div class="unit-50">
+        <div>
+            <img src="{{ booster.image_url }}" alt="{{ booster.name }}" />
+        </div>
+        <div>
+            <h2>{{ booster.name }}</h2>
+            <p>Cost: {{ booster.cost }}DP</p>
+        </div>
     </div>
-    <div class="booster-info">
-        <h2>{{ booster.name }}</h2>
-        <p>Cost: {{ booster.cost }}DP</p>
+    <div class="unit-50">
     </div>
 </div>
 {% endblock %}

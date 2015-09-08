@@ -44,8 +44,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=50)),
                 ('challenge_deck', models.BooleanField(default=False)),
-                ('dlc', models.BooleanField(default=False)),
-                ('dlc_name', models.CharField(max_length=50, null=True)),
+                ('dlc_name', models.CharField(help_text=b'Only fill in this field if the deck requites DLC.', max_length=50, verbose_name=b'DLC name', blank=True)),
             ],
             options={
                 'ordering': ['name'],

@@ -3,25 +3,75 @@
 {% block title %}- {{ card.name }}{% endblock %}
 
 {% block content %}
-    <div class="units-row end">
-        <div class="unit-33">Img</div>
-        <div class="unit-66">
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Name</td>
-                        <td>{{ card.name }}</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<div class="units-row end">
+    <div class="unit-33">
+        <img src="{{ card.image_url }}" alt="{{ card.name }}" />
     </div>
-    <div class="units-row end">
-        <div class="unit-50">Boosters</div>
-        <div class="unit-50">Decks</div>
+    <div class="unit-66">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td><b>{{ card.name }}</b></td>
+                </tr>
+                {% if card.is_monster %}
+                    <tr>
+                        <td>Type</td>
+                        <td>[ 
+                            {% for t in card.card_types.all %}
+                                {% if forloop.first %}
+                                    {{ t.name }}
+                                {% else %}
+                                    / {{ t.name }}
+                                {% endif %}
+                            {% endfor %}
+                        ]</td>
+                    </tr>
+                    {% if card.level %}
+                    <tr>
+                        <td>Level</td>
+                        <td>{{ card.level }}</td>
+                    </tr>
+                    {% elif card.stars %}
+                    <tr>
+                        <td>Stars</td>
+                        <td>{{ card.stars }}</td>
+                    </tr>
+                    {% endif %}
+                {% elif card.is_spell %}
+                    <tr>
+                        <td>Effect Type</td>
+                        <td>{{ card.effect_type }}</td>
+                    </tr>
+                {% endif %}
+                <tr>
+                    <td>Limitation</td>
+                    <td>{{ card.get_limitation_display }}</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>{{ card.description }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+</div>
+<div class="units-row end">
+    <div class="unit-50">
+        <h3>Boosters</h3>
+        {% for booster in card.boosters.all %}
+            <p>{{ booster.name }}</p>
+        {% empty %}
+            <p>This card is not available in a booster.</p>
+        {% endfor %}
+    </div>
+    <div class="unit-50">
+        <h3>Decks</h3>
+        {% for deck in card.decks.all %}
+            <p>{{ deck.name }}</p>
+        {% empty %}
+            <p>This card is not available in a deck.</p>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

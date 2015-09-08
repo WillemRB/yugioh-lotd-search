@@ -11,10 +11,9 @@ class Deck(models.Model):
     owner = models.ForeignKey(Player)
 
     challenge_deck = models.BooleanField(default=False)
-    #signature_card = models.ForeignKey(MonsterCard)
+    #signature_card = models.ForeignKey(Card)
 
-    dlc = models.BooleanField(default=False)
-    dlc_name = models.CharField(max_length=50, null=True)
+    dlc_name = models.CharField('DLC name', max_length=50, blank=True, help_text='Only fill in this field if the deck requites DLC.')
 
     def __str__(self):
         return self.name
