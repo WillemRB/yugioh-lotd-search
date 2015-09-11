@@ -1,6 +1,37 @@
+# Python cache
+__pycache__/
 *.pyc
-db.sqlite3
 
-[Oo]bj
-[Bb]in
+# PTVS analysis
+.ptvs/
+
+# Build results
+/bin/
+/obj/
+
+# User-specific files
 *.suo
+*.user
+*.sln.docstates
+
+# Auto-generated virtual environment
+/env/
+
+# Collected static files
+/static/
+
+# Auto-generated web.config
+/web.config
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac desktop service store files
+.DS_Store

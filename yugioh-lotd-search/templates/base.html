@@ -1,0 +1,38 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{% static "css\kube.min.css" %}" />
+        <link rel="stylesheet" href="{% static "css\style.css" %}" />
+        <title>Yugioh {% block title %}{% endblock %}</title>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li class="navbar-item"><a href="{% url 'search' %}">Search</a></li>
+                <li class="navbar-item"><a href="#">Boosters</a></li>
+                <li class="navbar-item"><a href="#">Decks</a></li>
+            </ul>
+        </nav>
+
+        {% if message %}
+        <div class="tools-alert tools-alert-green">
+            {{ message }}
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div class="tools-alert tools-alert-red">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <div class="units-row">
+            <div class="unit-centered unit-60">
+            {% block content %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

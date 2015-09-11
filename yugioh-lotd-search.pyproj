@@ -4,15 +4,13 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Name>yugioh-lotd-search</Name>
     <RootNamespace>yugioh-lotd-search</RootNamespace>
-    <InterpreterId>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</InterpreterId>
-    <InterpreterVersion>2.7</InterpreterVersion>
-    <DjangoSettingsModule>yugioh.settings</DjangoSettingsModule>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>d8faa118-0171-40ce-a497-6f70345555a3</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
+    <ProjectGuid>65c6bc33-20f7-473a-b0cd-41355a8fcbd9</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
     <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
     <StartupFile>manage.py</StartupFile>
     <SearchPath>
@@ -31,21 +29,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="cardsources\admin.py" />
+    <Compile Include="cardsources\migrations\0001_initial.py" />
     <Compile Include="cardsources\migrations\__init__.py" />
     <Compile Include="cardsources\models.py" />
     <Compile Include="cardsources\views.py" />
     <Compile Include="cardsources\__init__.py" />
     <Compile Include="cards\admin.py" />
+    <Compile Include="cards\migrations\0001_initial.py" />
     <Compile Include="cards\migrations\__init__.py" />
     <Compile Include="cards\models.py" />
     <Compile Include="cards\views.py" />
     <Compile Include="cards\__init__.py" />
     <Compile Include="manage.py" />
-    <Compile Include="rebuild-db.py" />
-    <Compile Include="yugioh\__init__.py" />
-    <Compile Include="yugioh\settings.py" />
-    <Compile Include="yugioh\urls.py" />
-    <Compile Include="yugioh\wsgi.py" />
+    <Compile Include="yugioh-lotd-search\__init__.py" />
+    <Compile Include="yugioh-lotd-search\settings.py" />
+    <Compile Include="yugioh-lotd-search\urls.py" />
+    <Compile Include="yugioh-lotd-search\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="cardsources\" />
@@ -57,10 +56,12 @@
     <Folder Include="cards\migrations\" />
     <Folder Include="cards\templates\" />
     <Folder Include="static\" />
-    <Folder Include="static\css\" />
-    <Folder Include="static\img\" />
-    <Folder Include="static\js\" />
-    <Folder Include="yugioh\" />
+    <Folder Include="yugioh-lotd-search\" />
+    <Folder Include="yugioh-lotd-search\static\" />
+    <Folder Include="yugioh-lotd-search\static\css\" />
+    <Folder Include="yugioh-lotd-search\static\img\" />
+    <Folder Include="yugioh-lotd-search\static\js\" />
+    <Folder Include="yugioh-lotd-search\templates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="cardsources\fixtures\battlepacks.json" />
@@ -70,18 +71,21 @@
     <Content Include="cardsources\templates\deck.html" />
     <Content Include="cards\fixtures\cardtypes.json" />
     <Content Include="cards\templates\card.html" />
+    <Content Include="cards\templates\report.html" />
     <Content Include="cards\templates\search.html" />
-    <Content Include="README.md" />
-    <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
-    <Content Include="static\css\kube.min.css" />
-    <Content Include="static\css\style.css" />
-    <Content Include="static\js\kube.min.js" />
-    <Content Include="static\style.css" />
+    <Content Include="requirements.txt" />
     <Content Include="web.config" />
+    <Content Include="web.debug.config" />
+    <Content Include="yugioh-lotd-search\static\css\kube.min.css" />
+    <Content Include="yugioh-lotd-search\static\css\style.css" />
+    <Content Include="yugioh-lotd-search\static\js\kube.min.js" />
+    <Content Include="yugioh-lotd-search\templates\base.html" />
   </ItemGroup>
   <ItemGroup>
-    <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\2.7" />
+    <None Include="readme.mht">
+      <SubType>WebBrowser</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
