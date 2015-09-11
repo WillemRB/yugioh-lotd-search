@@ -17,7 +17,7 @@
                 {% if card.is_monster %}
                     <tr>
                         <td>Type</td>
-                        <td>[ 
+                        <td>[
                             {% for t in card.card_types.all %}
                                 {% if forloop.first %}
                                     {{ t.name }}
@@ -70,10 +70,23 @@
     <div class="unit-50">
         <h3>Decks</h3>
         {% for deck in card.decks.all %}
-            <p>{{ deck.name }}</p>
+            {% if forloop.first %}
+                <table><tbody>
+            {% endif %}
+
+            <tr><td>{{ deck.name }}</td></tr>
+
+            {% if forloop.last %}
+                </tbody></table>
+            {% endif %}
         {% empty %}
             <p>This card is not available in a deck.</p>
         {% endfor %}
+    </div>
+</div>
+<div class="units-row end">
+    <div class="report">
+        <a href="{% url 'report' card.id %}">Report mistake</a>
     </div>
 </div>
 {% endblock %}

@@ -8,12 +8,14 @@ class Player(models.Model):
 
 class Deck(models.Model):
     name = models.CharField(max_length=50)
-    owner = models.ForeignKey(Player)
+    player = models.ForeignKey(Player, related_name='player')
+    opponent = models.ForeignKey(Player, related_name='opponent')
 
-    challenge_deck = models.BooleanField(default=False)
+    reverse = models.BooleanField(default=False, help_text='If this is a reverse challenge (from the campaign).')
+    challenge_deck = models.BooleanField('Challenge deck', default=False)
     #signature_card = models.ForeignKey(Card)
 
-    dlc_name = models.CharField('DLC name', max_length=50, blank=True, help_text='Only fill in this field if the deck requites DLC.')
+    dlc_name = models.CharField('DLC name', max_length=50, blank=True, help_text='Only fill in this field if the deck requires DLC.')
 
     def __str__(self):
         return self.name

@@ -1,4 +1,6 @@
-from django.db import models
+﻿from django.db import models
+from django.core.urlresolvers import reverse
+
 from cardsources.models import Deck,Booster
 
 class CardType(models.Model):
@@ -79,6 +81,9 @@ class Card(models.Model):
         
     def is_spell(self):
         return self.effect_type != None
+
+    def get_absolute_url(self):
+        return reverse('cards.views.single_card', args=[str(self.id)])
 
     class Meta:
         ordering = ['name']

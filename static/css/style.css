@@ -12,3 +12,13 @@
     color: #FFF;
     text-decoration: underline;
 }
+
+.report a {
+    color: #DE2C3B;
+    text-decoration: none;
+}
+
+.report a:hover {
+    color: #DE2C3B;
+    text-decoration: underline;
+}

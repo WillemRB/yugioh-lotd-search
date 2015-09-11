@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<form action="search/" method="GET" class="forms">
+<form action="" method="GET" class="forms">
     <div class="input-groups">
         <input type="text" name="q" placeholder="Search" />
         <span class="btn-append">
@@ -10,5 +10,11 @@
     </div>
 </form>
 
-
+{% if query %}
+    {% for card in cards %}
+        <p>{{ card.name }}</p>
+    {% empty %}
+        <p>No cards matched the query '{{ query }}'.</p>
+    {% endfor %}
+{% endif %}
 {% endblock %}
