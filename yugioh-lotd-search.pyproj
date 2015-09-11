@@ -33,13 +33,11 @@
     <Compile Include="cardsources\admin.py" />
     <Compile Include="cardsources\migrations\__init__.py" />
     <Compile Include="cardsources\models.py" />
-    <Compile Include="cardsources\tests.py" />
     <Compile Include="cardsources\views.py" />
     <Compile Include="cardsources\__init__.py" />
     <Compile Include="cards\admin.py" />
     <Compile Include="cards\migrations\__init__.py" />
     <Compile Include="cards\models.py" />
-    <Compile Include="cards\tests.py" />
     <Compile Include="cards\views.py" />
     <Compile Include="cards\__init__.py" />
     <Compile Include="manage.py" />
@@ -80,6 +78,7 @@
     <Content Include="static\css\style.css" />
     <Content Include="static\js\kube.min.js" />
     <Content Include="static\style.css" />
+    <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\2.7" />

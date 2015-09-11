@@ -1,4 +1,4 @@
-"""
+﻿"""
 Django settings for yugioh project.
 
 For more information on this file, see
@@ -49,6 +49,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'bugsnag.django.middleware.BugsnagMiddleware',
 )
 
 ROOT_URLCONF = 'yugioh.urls'
@@ -89,3 +90,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
     '/yugioh/static/',
 )
+
+BUGSNAG = {
+  "api_key": os.getenv('BUGSNAG_APIKEY'),
+  "project_root": BASE_DIR,
+}
