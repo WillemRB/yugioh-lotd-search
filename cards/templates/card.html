@@ -30,14 +30,26 @@
                     {% if card.level %}
                     <tr>
                         <td>Level</td>
-                        <td>{{ card.level }}</td>
+                        <td>
+                            <div class="card-level card-{{ card.level}}"></div>
+                        </td>
                     </tr>
-                    {% elif card.stars %}
+                    {% elif card.rank %}
                     <tr>
-                        <td>Stars</td>
-                        <td>{{ card.stars }}</td>
+                        <td>Rank</td>
+                        <td>
+                            <div class="card-rank card-{{ card.level}}"></div>
+                        </td>
                     </tr>
                     {% endif %}
+                    <tr>
+                        <td>ATK</td>
+                        <td>{{ card.attack }}</td>
+                    </tr>
+                    <tr>
+                        <td>DEF</td>
+                        <td>{{ card.defense }}</td>
+                    </tr>
                 {% elif card.is_spell %}
                     <tr>
                         <td>Effect Type</td>

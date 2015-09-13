@@ -55,7 +55,6 @@
     <Folder Include="cards\fixtures\" />
     <Folder Include="cards\migrations\" />
     <Folder Include="cards\templates\" />
-    <Folder Include="static\" />
     <Folder Include="yugioh-lotd-search\" />
     <Folder Include="yugioh-lotd-search\static\" />
     <Folder Include="yugioh-lotd-search\static\css\" />
@@ -74,6 +73,7 @@
     <Content Include="cards\templates\report.html" />
     <Content Include="cards\templates\search.html" />
     <Content Include="db.sqlite3" />
+    <Content Include="readme.md" />
     <Content Include="requirements.txt" />
     <Content Include="web.config" />
     <Content Include="web.debug.config" />
@@ -81,11 +81,6 @@
     <Content Include="yugioh-lotd-search\static\css\style.css" />
     <Content Include="yugioh-lotd-search\static\js\kube.min.js" />
     <Content Include="yugioh-lotd-search\templates\base.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="readme.mht">
-      <SubType>WebBrowser</SubType>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 

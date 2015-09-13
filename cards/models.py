@@ -51,7 +51,7 @@ class Card(models.Model):
         ),
     )
     level = models.IntegerField(null=True, blank=True)
-    stars = models.IntegerField(null=True, blank=True)
+    rank = models.IntegerField(null=True, blank=True)
     attack = models.IntegerField(null=True, blank=True)
     defense = models.IntegerField(null=True, blank=True)
 

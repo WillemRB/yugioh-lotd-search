@@ -16,9 +16,36 @@
 .report a {
     color: #DE2C3B;
     text-decoration: none;
+    font-size: 12px;
 }
 
 .report a:hover {
-    color: #DE2C3B;
     text-decoration: underline;
 }
+
+.report-form button {
+    margin-top: 5px;
+}
+
+.card-level {
+    background-image: url('/static/img/icon_level.png');
+    background-repeat: repeat-x;
+    height: 20px;
+}
+
+.card-rank {
+    background-image: url('/static/img/icon_rank.png');
+    background-repeat: repeat-x;
+    height: 20px;
+}
+
+.card-1 { width: 20px; }
+.card-2 { width: 40px; }
+.card-3 { width: 60px; }
+.card-4 { width: 80px; }
+.card-5 { width: 100px; }
+.card-6 { width: 120px; }
+.card-7 { width: 140px; }
+.card-8 { width: 160px; }
+.card-9 { width: 180px; }
+.card-10 { width: 200px; }
