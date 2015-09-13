@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}- Boosters{% endblock %}
+
+{% block content %}
+<div class="units-row end">
+    {% for booster in boosters %}
+        <a href="{% url 'booster' booster.id %}" alt="{{ booster.name }}"><img src="{{ booster.image_url }}" /></a>
+    {% empty %}
+        No data available.
+    {% endfor %}
+</div>
+{% endblock %}

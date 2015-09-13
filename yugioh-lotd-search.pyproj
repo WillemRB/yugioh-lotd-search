@@ -32,6 +32,9 @@
     <Compile Include="cardsources\migrations\0001_initial.py" />
     <Compile Include="cardsources\migrations\__init__.py" />
     <Compile Include="cardsources\models.py" />
+    <Content Include="cardsources\templates\boosters_list.html">
+      <SubType>Code</SubType>
+    </Content>
     <Compile Include="cardsources\views.py" />
     <Compile Include="cardsources\__init__.py" />
     <Compile Include="cards\admin.py" />
@@ -68,6 +71,7 @@
     <Content Include="cardsources\fixtures\players.json" />
     <Content Include="cardsources\templates\booster.html" />
     <Content Include="cardsources\templates\deck.html" />
+    <Content Include="cardsources\templates\decks_list.html" />
     <Content Include="cards\fixtures\cardtypes.json" />
     <Content Include="cards\templates\card.html" />
     <Content Include="cards\templates\report.html" />
@@ -79,6 +83,8 @@
     <Content Include="web.debug.config" />
     <Content Include="yugioh-lotd-search\static\css\kube.min.css" />
     <Content Include="yugioh-lotd-search\static\css\style.css" />
+    <Content Include="yugioh-lotd-search\static\img\icon_level.png" />
+    <Content Include="yugioh-lotd-search\static\img\icon_rank.png" />
     <Content Include="yugioh-lotd-search\static\js\kube.min.js" />
     <Content Include="yugioh-lotd-search\templates\base.html" />
   </ItemGroup>
