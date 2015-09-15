@@ -13,7 +13,7 @@ class Deck(models.Model):
 
     reverse = models.BooleanField(default=False, help_text='If this is a reverse challenge (from the campaign).')
     challenge_deck = models.BooleanField('Challenge deck', default=False)
-    #signature_card = models.ForeignKey(Card)
+    signature_card = models.ForeignKey('cards.Card')
 
     dlc_name = models.CharField('DLC name', max_length=50, blank=True, help_text='Only fill in this field if the deck requires DLC.')
 

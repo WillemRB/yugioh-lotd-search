@@ -222,5 +222,33 @@
         "fields": {
             "name": "Tuner"
         }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 33,
+        "fields": {
+            "name": "Flip"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 34,
+        "fields": {
+            "name": "Spirit"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 35,
+        "fields": {
+            "name": "Toon"
+        }
+    },
+    {
+        "model": "cards.CardType",
+        "pk": 36,
+        "fields": {
+            "name": "Union"
+        }
     }
 ]
