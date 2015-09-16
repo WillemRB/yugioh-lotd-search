@@ -29,7 +29,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="cardsources\admin.py" />
-    <Compile Include="cardsources\migrations\0001_initial.py" />
     <Compile Include="cardsources\migrations\__init__.py" />
     <Compile Include="cardsources\models.py" />
     <Content Include="cardsources\templates\boosters_list.html">
@@ -41,7 +40,6 @@
     <Compile Include="cards\management\commands\import_cards.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="cards\migrations\0001_initial.py" />
     <Compile Include="cards\migrations\__init__.py" />
     <Compile Include="cards\models.py" />
     <Compile Include="cards\views.py" />
