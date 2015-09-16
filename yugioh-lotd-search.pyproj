@@ -38,6 +38,9 @@
     <Compile Include="cardsources\views.py" />
     <Compile Include="cardsources\__init__.py" />
     <Compile Include="cards\admin.py" />
+    <Compile Include="cards\management\commands\import_cards.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="cards\migrations\0001_initial.py" />
     <Compile Include="cards\migrations\__init__.py" />
     <Compile Include="cards\models.py" />
@@ -56,7 +59,9 @@
     <Folder Include="cardsources\templates\" />
     <Folder Include="cards\" />
     <Folder Include="cards\fixtures\" />
+    <Folder Include="cards\management\commands\" />
     <Folder Include="cards\migrations\" />
+    <Folder Include="cards\management\" />
     <Folder Include="cards\templates\" />
     <Folder Include="yugioh-lotd-search\" />
     <Folder Include="yugioh-lotd-search\static\" />
