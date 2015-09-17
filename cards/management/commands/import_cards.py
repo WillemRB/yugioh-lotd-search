@@ -55,7 +55,7 @@ class Command(BaseCommand):
                             types.append(ct.id)
                         card.card_types = types
                     else:
-                        card.effect_type = json['data']['property'].lower() + ' ' + json['data']['card_type'].lower()
+                        card.effect_type = ('{} {}'.format(json['data']['property'], json['data']['card_type'])).lower()
                 else:
                     errors.write(line)
                     errors.flush()
@@ -65,7 +65,7 @@ class Command(BaseCommand):
                 card.boosters = [ booster.id ]
                 card.save()
 
-                print booster.name + ' - ' + line.strip() + ' (' + str(count) + ')'
+                print '{} - {} ({})'.format(booster.name, line.strip(), str(count))
         except Exception, e:
             bugsnag.notify(e, context='CardImport', meta_data={ 'card': line, 'booster_name': booster_name, 'response': response.text })
         finally:
