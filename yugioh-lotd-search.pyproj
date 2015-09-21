@@ -48,6 +48,12 @@
     <Compile Include="cards\views.py" />
     <Compile Include="cards\__init__.py" />
     <Compile Include="manage.py" />
+    <Compile Include="yugioh-lotd-search\middleware\sumologic.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="yugioh-lotd-search\middleware\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="yugioh-lotd-search\__init__.py" />
     <Compile Include="yugioh-lotd-search\settings.py" />
     <Compile Include="yugioh-lotd-search\urls.py" />
@@ -65,6 +71,7 @@
     <Folder Include="cards\management\" />
     <Folder Include="cards\templates\" />
     <Folder Include="yugioh-lotd-search\" />
+    <Folder Include="yugioh-lotd-search\middleware\" />
     <Folder Include="yugioh-lotd-search\static\" />
     <Folder Include="yugioh-lotd-search\static\css\" />
     <Folder Include="yugioh-lotd-search\static\img\" />
