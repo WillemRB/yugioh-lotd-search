@@ -1,4 +1,5 @@
 ﻿from django.db import models
+from django.template.defaultfilters import slugify
 
 class Player(models.Model):
     name = models.CharField(max_length=30)
@@ -8,6 +9,7 @@ class Player(models.Model):
 
 class Deck(models.Model):
     name = models.CharField(max_length=50)
+    slug = models.SlugField(default='')
     player = models.ForeignKey(Player, related_name='player')
     opponent = models.ForeignKey(Player, related_name='opponent')
 
@@ -21,13 +23,20 @@ class Deck(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('cardsources.views.view_deck', args=[str(self.id)])
+        kwargs = { 'deck_id': self.pk, 'slug': self.slug }
+        return reverse('cardsources.views.view_deck', kwargs=kwargs)
+
+    def save(self, *args, **kwargs):
+        if self.slug == '':
+            self.slug = slugify(self.name)
+        super(Deck, self).save(*args, **kwargs)
 
     class Meta:
         ordering = ['name']
 
 class Booster(models.Model):
     name = models.CharField(max_length=50)
+    slug = models.SlugField(default='')
     cost = models.IntegerField(default=400)
     serie = models.CharField(
         max_length=10,
@@ -46,18 +55,30 @@ class Booster(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('cardsources.views.view_booster', args=[str(self.id)])
+        kwargs = { 'booster_id': self.id, 'slug': self.slug }
+        return reverse('cardsources.views.view_booster', kwargs=kwargs)
+
+    def save(self, *args, **kwargs):
+        if self.slug == '':
+            self.slug = slugify(self.name)
+        super(Booster, self).save(*args, **kwargs)
 
     class Meta:
         ordering = ['name']
 
 class BattlePack(models.Model):
     name = models.CharField(max_length=30)
+    slug = models.SlugField(default='')
     is_sealed = models.BooleanField('Sealed', default=False)
     is_draft = models.BooleanField('Draft', default=False)
 
     def __str__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        if self.slug == '':
+            self.slug = slugify(self.name)
+        super(BattlePack, self).save(*args, **kwargs)
 
     class Meta:
         ordering = ['name']

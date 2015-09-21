@@ -37,6 +37,9 @@
     <Compile Include="cardsources\views.py" />
     <Compile Include="cardsources\__init__.py" />
     <Compile Include="cards\admin.py" />
+    <Compile Include="cards\management\commands\generate_card_slug.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="cards\management\commands\import_cards.py">
       <SubType>Code</SubType>
     </Compile>

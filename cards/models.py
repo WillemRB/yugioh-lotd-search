@@ -1,5 +1,6 @@
-﻿from django.db import models
-from django.core.urlresolvers import reverse
+﻿from django.core.urlresolvers import reverse
+from django.db import models
+from django.template.defaultfilters import slugify
 
 from cardsources.models import Deck,Booster
 
@@ -14,6 +15,7 @@ class CardType(models.Model):
 
 class Card(models.Model):
     name = models.CharField(max_length=200)
+    slug = models.SlugField(default='')
     description = models.TextField(help_text='The card text (can include flavour text)', blank=True)
 
     attribute = models.CharField(
@@ -83,7 +85,13 @@ class Card(models.Model):
         return self.effect_type != None
 
     def get_absolute_url(self):
-        return reverse('cards.views.single_card', args=[str(self.id)])
+        kwargs = { 'card_id': self.pk, 'slug': self.slug }
+        return reverse('cards.views.single_card', kwargs=kwargs)
+
+    def save(self, *args, **kwargs):
+        if self.slug == '':
+            self.slug = slugify(self.name)
+        super(Card, self).save(*args, **kwargs)
 
     class Meta:
         ordering = ['name']

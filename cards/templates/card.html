@@ -72,7 +72,7 @@
     <div class="unit-50">
         <h3>Boosters</h3>
         {% for booster in card.boosters.all %}
-            <a href="{% url 'booster' booster.id %}">
+            <a href="{% url 'booster' booster.id booster.slug %}">
                 <img src="{{ booster.image_url }}" alt="{{ booster.name }}" />
             </a>
         {% empty %}
@@ -98,7 +98,7 @@
 </div>
 <div class="units-row end">
     <div class="report">
-        <a href="{% url 'report' card.id %}">Report mistake</a>
+        <a href="{% url 'report' card.id card.slug %}">Report mistake</a>
     </div>
 </div>
 {% endblock %}

@@ -13,7 +13,7 @@
 {% if query %}
     {% for card in cards %}
         <p>
-            <a href="{% url 'single_card' card.id %}">{{ card.name }}</a>
+            <a href="{% url 'single_card' card.id card.slug %}">{{ card.name }}</a>
         </p>
     {% empty %}
         <p>No cards matched the query '{{ query }}'.</p>

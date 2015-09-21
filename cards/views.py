@@ -20,15 +20,18 @@ def search(request):
     else:
         return render(request, 'search.html', { 'cards': cards, 'query': query })
     
-def single_card(request, card_id):
+def single_card(request, card_id, slug):
     card = get_object_or_404(Card, pk=card_id)
     return render(request, 'card.html', { 'card': card })
     
-def report_card(request, card_id):
+def report_card(request, card_id, slug):
+    if request.method == 'POST':
+        return report_card_submit(request, card_id, slug)
+
     card = get_object_or_404(Card, pk=card_id)
     return render(request, 'report.html', { 'card': card })
     
-def report_card_submit(request, card_id):
+def report_card_submit(request, card_id, slug):
     card = get_object_or_404(Card, pk=card_id)
     
     report_message = request.POST.get('report')

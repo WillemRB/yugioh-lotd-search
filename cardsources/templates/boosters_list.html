@@ -5,7 +5,7 @@
 {% block content %}
 <div class="units-row end">
     {% for booster in boosters %}
-        <a href="{% url 'booster' booster.id %}" alt="{{ booster.name }}"><img src="{{ booster.image_url }}" /></a>
+        <a href="{% url 'booster' booster.id booster.slug %}" alt="{{ booster.name }}"><img src="{{ booster.image_url }}" /></a>
     {% empty %}
         No data available.
     {% endfor %}

@@ -6,7 +6,7 @@
     <p>This page is meant to notify us of any mistakes for this card ({{card.name}}).<br />
     Please provide a description with as much detail as possible so we can quickly fix the mistake.</p>
 
-    <form action="submit" method="POST" class="forms">
+    <form action="" method="POST" class="forms">
     {% csrf_token %}
     <div class="report-form">
         <textarea name="report" cols="50" rows="6"></textarea>
