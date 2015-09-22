@@ -1,5 +1,5 @@
 ﻿from django.contrib import admin
-from models import Deck, Booster, BattlePack
+from models import Deck, Booster, BattlePack, Player
 
 class DeckAdmin(admin.ModelAdmin):
     prepopulated_fields = { 'slug': ('name',) }
@@ -13,3 +13,4 @@ class BattlePackAdmin(admin.ModelAdmin):
 admin.site.register(Deck)
 admin.site.register(Booster)
 admin.site.register(BattlePack)
+admin.site.register(Player)

@@ -3,11 +3,11 @@ from django.views.decorators.http import require_GET
 
 from models import Booster, Deck
 
-def view_booster(request, booster_id):
+def view_booster(request, booster_id, slug):
     booster = get_object_or_404(Booster, pk=booster_id)
     return render(request, 'booster.html', { 'booster': booster })
 
-def view_deck(request, deck_id):
+def view_deck(request, deck_id, slug):
     deck = get_object_or_404(Deck, pk=deck_id)
     return render(request, 'deck.html', { 'deck': deck })
 

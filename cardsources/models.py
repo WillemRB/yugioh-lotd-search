@@ -3,14 +3,15 @@ from django.template.defaultfilters import slugify
 
 class Player(models.Model):
     name = models.CharField(max_length=30)
+    image_url = models.URLField(null=True, blank=True)
 
     def __str__(self):
         return self.name
 
 class Deck(models.Model):
     name = models.CharField(max_length=50)
-    slug = models.SlugField(default='')
-    player = models.ForeignKey(Player, related_name='player')
+    slug = models.SlugField(blank=True)
+    player = models.ForeignKey(Player, related_name='player', null=True)
     opponent = models.ForeignKey(Player, related_name='opponent')
 
     reverse = models.BooleanField(default=False, help_text='If this is a reverse challenge (from the campaign).')
@@ -36,7 +37,7 @@ class Deck(models.Model):
 
 class Booster(models.Model):
     name = models.CharField(max_length=50)
-    slug = models.SlugField(default='')
+    slug = models.SlugField(blank=True)
     cost = models.IntegerField(default=400)
     serie = models.CharField(
         max_length=10,
@@ -48,7 +49,7 @@ class Booster(models.Model):
             ('arc-v', 'Yu-Gi-Oh ARC-V'),
         )
     )
-    description = models.TextField()
+    description = models.TextField(blank=True)
     image_url = models.URLField()
 
     def __str__(self):
@@ -68,7 +69,7 @@ class Booster(models.Model):
 
 class BattlePack(models.Model):
     name = models.CharField(max_length=30)
-    slug = models.SlugField(default='')
+    slug = models.SlugField(blank=True)
     is_sealed = models.BooleanField('Sealed', default=False)
     is_draft = models.BooleanField('Draft', default=False)
 

@@ -15,7 +15,7 @@ class CardType(models.Model):
 
 class Card(models.Model):
     name = models.CharField(max_length=200)
-    slug = models.SlugField(default='')
+    slug = models.SlugField(blank=True)
     description = models.TextField(help_text='The card text (can include flavour text)', blank=True)
 
     attribute = models.CharField(
