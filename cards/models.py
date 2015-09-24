@@ -42,9 +42,6 @@ class Card(models.Model):
         default=3)
     
     database_id = models.IntegerField(null=True, blank=True, help_text='The Yugioh-Card database id')
-    # Changes per printing
-    #print_tag = models.CharField(max_length=15, null=True)
-
     image_url = models.URLField(max_length=200, default='http://i.imgur.com/dLf9fps.png')
 
     decks = models.ManyToManyField(Deck, blank=True)

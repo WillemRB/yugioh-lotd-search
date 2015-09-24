@@ -78,7 +78,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = getenv('DJANGO_SECRET_KEY', getenv('DJANGO_SECRET_KEY', 'secret'))
+SECRET_KEY = getenv('DJANGO_SECRET_KEY', 'secret')
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -145,10 +145,7 @@ LOGGING = {
     },
 }
 
-# Specify the default test runner.
-TEST_RUNNER = 'django.test.runner.DiscoverRunner'
-
 BUGSNAG = {
-  "api_key": getenv('BUGSNAG_APIKEY', 'key'),
+  "api_key": getenv('BUGSNAG_APIKEY', ''),
   "project_root": PROJECT_ROOT,
 }

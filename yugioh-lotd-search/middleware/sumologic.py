@@ -11,7 +11,7 @@ class SumoLogicMiddleware(object):
     def process_response(self, request, response):
         status = response.status_code
         contentlength = len(response.content)
-        
+
         self.log(request, status, contentlength)
         return response
 
@@ -26,7 +26,6 @@ class SumoLogicMiddleware(object):
             source_ip = request.META.get('HTTP_X_FORWARDED_FOR').split(',')[-1].strip()
         elif 'REMOTE_ADDR' in request.META:
             source_ip = request.META.get('REMOTE_ADDR')
-        return source_ip
 
         method = request.method
         path = request.get_full_path()
