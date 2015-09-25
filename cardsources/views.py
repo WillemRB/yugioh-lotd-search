@@ -5,7 +5,9 @@ from models import Booster, Deck
 
 def view_booster(request, booster_id, slug):
     booster = get_object_or_404(Booster, pk=booster_id)
-    return render(request, 'booster.html', { 'booster': booster })
+    cards = booster.card_set.all()
+
+    return render(request, 'booster.html', { 'booster': booster, 'cards': cards })
 
 def view_deck(request, deck_id, slug):
     deck = get_object_or_404(Deck, pk=deck_id)

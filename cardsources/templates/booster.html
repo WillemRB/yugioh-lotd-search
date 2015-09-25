@@ -14,7 +14,24 @@
         </div>
     </div>
     <div class="unit-50">
-        <h2>Cards</h2>
+        <table>
+            <thead>
+                <tr><td><h2>Cards</h2></td></tr>
+            </thead>
+            <tbody>
+                {% for card in cards %}
+                    <tr>
+                        <td>
+                            <a href="{% url 'single_card' card.id card.slug %}">{{ card.name }}</a>
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td>No cards available</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 </div>
 {% endblock %}
