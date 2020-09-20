@@ -24,35 +24,4 @@ def single_card(request, card_id, slug):
     card = get_object_or_404(Card, pk=card_id)
     return render(request, 'card.html', { 'card': card })
     
-def report_card(request, card_id, slug):
-    if request.method == 'POST':
-        return report_card_submit(request, card_id, slug)
-
-    card = get_object_or_404(Card, pk=card_id)
-    return render(request, 'report.html', { 'card': card })
-    
-def report_card_submit(request, card_id, slug):
-    card = get_object_or_404(Card, pk=card_id)
-    
-    report_message = request.POST.get('report')
-    
-    if len(report_message) == 0:
-        return render(request, 'report.html', { 'card': card, 'error': 'No description was provided!' })
-
-    headers = { 'Authorization': 'Bearer ' + os.getenv('ASANA_ACCESSKEY') }
-    payload = { 'data': 
-        { 
-            'name': card.name, 
-            'notes': report_message, 
-            'workspace': long(os.getenv('ASANA_WORKSPACEID')), 
-            'projects': [ long(os.getenv('ASANA_PROJECTID')) ] 
-        } 
-    }
-    
-    resp = requests.post("https://app.asana.com/api/1.0/tasks", data=json.dumps(payload), headers=headers)
-    
-    if resp.status_code == 201:
-        return render(request, 'report.html', { 'card': card, 'message': 'Thank you for your contribution.' })
-    else:
-        return render(request, 'report.html', { 'card': card, 'error': 'An error occured while sending the request.' })
     
